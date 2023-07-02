@@ -13,10 +13,10 @@
   "devDependencies": {
     "electron": "^25.2.0"
   },
- "dependencies": {
+  "dependencies": {
     "chokidar": "^3.4.3",
-    "drag-drop": "^6.1.0",
     "fs-extra": "^9.0.1",
-    "open": "^7.3.0"
+    "open": "^7.3.0",
+    "python-shell": "^5.0.0"
   }
 }
