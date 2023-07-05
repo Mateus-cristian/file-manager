@@ -21,29 +21,68 @@
   </head>
 
   <body class="app">
-    <!-- upload area -->
-    <div id="uploader" class="app__uploader">
-      <div class="app__uploader__icon-area">
-        <img
-          src="../assets/upload.svg"
-          class="app__uploader__icon-area__icon"
-        />
-        <p class="app__uploader__icon-area__text">Upload de pasta</p>
+    <div class="app__navbar" id="navbar">
+      <div class="app__navbar__upload">
+        <!-- upload area -->
+        <div class="app__uploader__icon-area" id="uploader__area">
+          <img
+            src="../assets/upload.svg"
+            class="app__uploader__icon-area__icon"
+          />
+          <p class="app__uploader__icon-area__text">Upload de pasta</p>
+        </div>
+
+        <div class="app__uploader__button-area" id="uploader__button">
+          <button class="app__uploader__button-area__button" id="dialog">
+            Adicionar arquivos
+          </button>
+        </div>
       </div>
-      <div class="app__uploader__button-area">
-        <button class="app__uploader__button-area__button" id="dialog">
-          Adicionar pasta
-        </button>
-  
-      </div>
+      <!-- file list -->
+      <div id="filelist" class="app__files"></div>
     </div>
 
-    <!-- file list -->
-    <div id="filelist" class="app__files"></div>
+    <!-- upload area loading-->
+    <div id="uploader" class="app__uploader">
+      <div class="app__uploader__container">
+        <div class="app__uploader__container-search">
+          <div class="app__uploader__search">
+            <div class="app__uploader__search-input">
+              <input type="text" id="inputSearch" />
+              <button id="buttonSearch">Buscar</button>
+            </div>
+            <span id="counter"></span>
+            <div class="app__uploader__search__buttons">
+              <button id="highlightPrevious">↑</button>
+              <button id="highlightNext">↓</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="app_openedFile" id="openedFile"></div>
+    </div>
+      <div
+        class="app__uploader__loading container__loading"
+        id="loading-message"
+
+      >
+        <div class="container__loading__circle"></div>
+        <div class="container__loading__word">
+          <span>L</span>
+          <span>O</span>
+          <span>A</span>
+          <span>D</span>
+          <span>I</span>
+          <span>N</span>
+          <span>G</span>
+        </div>
+      </div>
 
     <!-- require render JavaScript -->
-    <script >
-      require('../js/renderer.js')
+    <script>
+      require("../js/renderer.js");
     </script>
   </body>
 </html>
